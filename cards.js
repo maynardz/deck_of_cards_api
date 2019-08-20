@@ -57,7 +57,7 @@ function playerOnePile(json) {
             playerOneArr.push(json.cards[i].code);
         }
     }
-    // console.log(playerOneArr);
+    console.log(playerOneArr);
 
     playerOne = `https://deckofcardsapi.com/api/deck/${deckId}/pile/playerOnePile/add/?cards=${playerOneArr.join()}`;
 
@@ -66,7 +66,7 @@ function playerOnePile(json) {
             return result.json();
         })
         .then(pileOneData => {
-            // console.log(pileOneData);
+            console.log(pileOneData);
         })
 }
 
@@ -80,7 +80,7 @@ function playerTwoPile(json) {
             playerTwoArr.push(json.cards[i].code);
         }
     }
-    // console.log(playerTwoArr);
+    console.log(playerTwoArr);
 
     playerTwo = `https://deckofcardsapi.com/api/deck/${deckId}/pile/playerTwoPile/add/?cards=${playerTwoArr.join()}`;
 
@@ -89,7 +89,7 @@ function playerTwoPile(json) {
             return result.json()
         })
         .then(pileTwoData => {
-            // console.log(pileTwoData);
+            console.log(pileTwoData);
         })
 }
 
@@ -100,7 +100,7 @@ function drawFromPile() {
             return response.json();
         })
         .then(json => {
-            // console.log(json);
+            console.log(json);
             displayPlayerOneResults(json);
         })
 
@@ -109,7 +109,7 @@ function drawFromPile() {
             return response.json()
         })
         .then(json => {
-            // console.log(json);
+            console.log(json);
             displayPlayerTwoResults(json);
         })
 }
